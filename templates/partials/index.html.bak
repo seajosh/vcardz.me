@@ -1,0 +1,37 @@
+<!-- Extend our site layout -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/login.js') }}"></script>
+{% extends "layout.html" %}
+
+{% block content -%}
+<div id="content"> 
+    <div id="beta"> 
+        <img id="logo" src="{{ url_for('static', filename='images/logo220.png') }}" width="220" height="220" alt="Kontexa logo"> 
+        <div id="form"> 
+            <form method="post" action="/upload" method="post" enctype="multipart/form-data"> 
+                <h1><span class="reconcil">Reconcil.me</span> alpha</h1>
+                
+                <p>Let us Reconcil, <strong>de-duplicate</strong>, clean and combine your <strong>many address books</strong> into one <strong>global address book</strong>.
+                </p>
+                <p><span class="item green">1</span> OAuth into your Google Contacts:</p>
+                    <input type="email" class="email" name="email_address" value="{{email_address}}" readonly="readonly" required="required" spellcheck="false"></input>
+                    <button type="button" value="Reconcil.me" class="blue" onclick="doOAuth()">OAuth</button>
+                <p><span class="item green">2</span> <strong>Optionally</strong>: Export additional contacts from <a href="http://support.google.com/mail/bin/answer.py?hl=en&answer=24911" target="_blank">GMail</a>, 
+                <a href="http://support.apple.com/kb/PH4655" target="_blank">Mac Address Book</a> 
+                or <a href="http://support.microsoft.com/kb/175017" target="_blank">Outlook</a> in VCard format.
+                Upload your address book export:</p>
+                {% with messages = get_flashed_messages() %}
+                  {% if messages == None %}
+                  {% else %}
+                  <!--<p style="color: red">{{ messages[0] }}</p>-->
+                  {% endif %}
+                {% endwith %}
+                    <input type="file" name="file" id="filebutton" required="required">
+                <p><span class="item green">3</span><input type="submit" value="Reconcil.me" class="blue"> </p>
+                
+                <p>Your address book will <b>never be shared</b> with any 3rd parties.</p>
+                <p>Send <a href="mailto:feedback@kontexa.com">feedback</a>.</p>
+            </form> 
+        </div> 
+    </div> 
+</div>
+{% endblock -%}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="vcardz" id="ng-app-container">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:700|Nunito" rel="stylesheet" type="text/css">
+        <link rel="shortcut icon" href="/lib/images/favicon.ico">
+        <link rel="stylesheet" href="/lib/assets/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/lib/app/css/app.css" type="text/css">
+        <title>Kontexa</title>
+    </head>
+
+    <body>
+
+      <div class="container">
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">Kontexa</a>
+            </div>
+
+            <login-google ng-hide="hide_login" class="navbar-right navbar-btn"></login-google>
+
+          </div>
+        </nav>
+        <fetch-data></fetch-data>
+        <vcard-list></vcard-list>
+        {% block content %}
+        {% endblock %}
+      </div>
+
+      <script src="/lib/assets/jquery/dist/jquery.min.js"></script>
+      <script src="/lib/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+      <script src="/lib/assets/angularjs/angular.min.js"></script>
+      <script src="/lib/app/js/app.js"></script>
+      <script src="
+    </body> 
+</html>

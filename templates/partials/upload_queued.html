@@ -1,0 +1,20 @@
+<!-- Extend our site layout -->
+{% extends "layout.html" %}
+
+{% block content -%}
+<div id="content>
+        <div id="beta"> 
+        <a href="/">
+            <img id="logo" src="{{ url_for('static', filename='images/logo220.png') }}" width="220" height="220" alt="Kontexa logo"> 
+        </a>
+        <div id="form" style="margin-top: 80px;"> 
+            <form method="post" action="/upload" method="post" enctype="multipart/form-data"> 
+                <h1><span class="reconcil">Reconcil.me</span> alpha</h1> 
+                <p style="width: 460px;word-wrap: break-word; text-align: justify; padding-top: 15px;">
+                Your contacts are being scrubbed as we speak. We'll send an email with a download link when we're done.
+                </p>
+            </form>
+        </div> 
+    </div> 
+</div>
+{% endblock -%}

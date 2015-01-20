@@ -1,0 +1,26 @@
+<!-- Extend our site layout -->
+{% extends "layout.html" %}
+
+{% block content -%}
+<script type="text/JavaScript">
+    function timedRefresh(timeoutPeriod) {
+        setTimeout("location.reload(true);", timeoutPeriod);
+    }
+</script>
+
+<div id="content"> 
+    <div id="beta"> 
+        <a href="/">
+            <img id="logo" src="{{ url_for('static', filename='images/logo220.png') }}" width="220" height="220" alt="Kontexa logo"> 
+        </a>
+        <div id="form" style="margin-top: 80px;"> 
+            <form method="post" action="/upload" method="post" enctype="multipart/form-data"> 
+                <h1><span class="reconcil">Reconcil.me</span> alpha</h1> 
+                <p style="width: 460px;word-wrap: break-word; text-align: justify; padding-top: 15px;">
+                Your cleaned contacts will download in a few minutes. We'll <b>email you</b> when they're ready!
+                </p>
+            </form>
+        </div> 
+    </div> 
+</div>
+{% endblock -%}

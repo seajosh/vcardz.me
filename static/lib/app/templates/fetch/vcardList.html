@@ -1,0 +1,19 @@
+<section>
+  <div class="col-xs-4 vcard" ng-repeat="card in cards" ng-if="card.fn.val != null" style="min-height: 10em;">
+    <h2 class="overflow">{{ card.fn.val }}</h2>
+    <div class="row" ng-repeat="phone in card.phone">
+      <div class="glyphicon glyphicon-earphone col-xs-1"></div>
+      <div class="col-xs-11 overflow">{{ phone.val }}</div>
+    </div>
+    <div class="row" ng-repeat="email in card.email">
+      <div class="glyphicon glyphicon-envelope col-xs-1"></div>
+      <div class="col-xs-11 overflow">{{ email.val }}</div>
+    </div>
+    <div class="row" ng-repeat="adr in card.adr">
+      <div class="glyphicon glyphicon-map-marker col-xs-1"></div>
+      <div class="col-xs-11 overflow">
+        {{ adr.val }}
+      </div>
+    </div>
+  </div>
+</section>

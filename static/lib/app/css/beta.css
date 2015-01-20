@@ -1,0 +1,171 @@
+body {
+    font: 14px "ars-maquette-web", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    letter-spacing: .08em;
+    line-height: 1.75em;
+    color: #555;
+}
+	body.email {
+		padding: 1em 1em;
+	}
+
+h1 {
+    letter-spacing: .02em;
+	font-size: 33px;
+    font-weight: 300;
+    margin: 0 0 33px 0;
+}
+h2 {
+	font-size: 160%;
+    letter-spacing: .04em;
+    line-height: 125%;
+}
+
+	h1 .reconcil, h2 .reconcil {
+		font-weight: 700;
+	}
+.email p {
+	color: black;
+	max-width: 560px; /* 40em */
+}
+p.fineprint {
+	font-size: 80%;
+	color: #c2c2c2;
+}
+
+
+a {
+	color: #2a8ebf;
+	text-decoration: none;
+}
+	a:hover {
+		text-decoration: underline;
+	}
+
+strong {
+	font-weight: 700;
+}
+.reconcil {
+	color: black;
+}
+
+body > div {
+    vertical-align: top
+}
+
+div#beta {
+    text-align: center;
+    vertical-align: top;
+    padding-top: 5em;
+}
+img#logo {
+    margin: 3em;
+    display: inline-block;
+    vertical-align: top;
+}
+	.email img#logo {
+		display: block;
+		margin: 0 2em 1em 2em;
+		float: right;
+	}
+	/* Smaller logo in narrow circumstances. Not tested.
+	@media (max-width:300px) {
+		.email img#logo {
+			width: 70px; height: 70px;
+			margin: 0 0 1em 0;
+			float: none;
+		}
+	}
+	*/
+div#form {
+    display: inline-block;
+    text-align: left;
+    margin: 3em;
+    padding-top: 10px;
+    vertical-align: top;
+}
+div#form p {
+	width: 460px;
+	word-wrap: break-word;
+	text-align: justify;
+    margin: 1.75em 0 0;
+}
+span.item {
+	font-weight: 700;
+	padding: .25em .85em;
+	color: white;
+	margin-right: 1em;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+}
+
+div#beta form label {
+    display: block;
+    margin: 1.5em 0 0;
+}
+
+div#beta form img {
+    display: block;
+}
+div#beta form input {
+    display: inline;
+    margin-top: 14px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    font-family: "ars-maquette-web", Helvetica, Arial, sans-serif;
+    letter-spacing: .08em;
+    padding: .3em;
+    font-size: 100%;
+}
+div#beta form input[type=text], div#beta form input[type=email] {
+    width: 320px;
+    background-color: #e0e0e0;
+}
+	div#beta form input.email {
+		font-size: 140%;
+		color: #555;
+	}
+div#beta form input[type=file] {
+    width: 444px;
+    background-color: #e0e0e0;
+    padding: 14px;
+    color: #555;
+}
+
+div#beta form input[type=submit] {
+	display: inline-block;
+    padding: .5em 2em;
+    color: white;
+    font-weight: bold;
+    font-size: 120%;
+	letter-spacing: .08em;
+    -webkit-box-shadow: 4px 4px 10px #c2c2c2;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin-top: 0;
+}
+
+div#beta form button[type=button] {
+	display: inline-block;
+    padding: .5em 2em;
+    color: white;
+    font-weight: bold;
+    font-size: 120%;
+    width: 130px;
+	letter-spacing: .08em;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    margin-top: 0;
+}
+
+.blue {
+    background-color: #2a8ebf;
+}
+
+.green {
+    background-color: #74b71b;
+}
+
+.grey {
+    background-color: #c2c2c2;
+}
