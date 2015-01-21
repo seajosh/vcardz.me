@@ -1,1 +1,1 @@
-web: flask index.py --log-file -
+web: python index.py --log-file -
