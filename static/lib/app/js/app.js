@@ -76,7 +76,7 @@
                       var params = {
                         'accesstype': 'offline',
                         'callback': $scope.loginCallback,
-                        'clientid': '710958114554-4ovgk8nmv0nk0d4q2g177f747mfukl4p.apps.googleusercontent.com',
+                        'clientid': '820881774028-tjrlpdc26fns52nal6opraqqqsnocl7u.apps.googleusercontent.com',
                         'cookiepolicy': 'single_host_origin',
                         'requestvisibleactions': 'http://schema.org/AddAction',
                         'scope': 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/contacts.readonly'
