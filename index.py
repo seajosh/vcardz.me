@@ -141,7 +141,7 @@ def google_contacts():
 
 
 if __name__ == '__main__':
-    port = 5000
+    port = int(os.environ.get('VCARDZ_PORT', 5000))
     app.debug = True
     app.run(host='0.0.0.0',
             port=port,
