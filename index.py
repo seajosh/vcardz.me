@@ -141,12 +141,10 @@ def google_contacts():
 
 
 if __name__ == '__main__':
-    port = int(os.environ.get('VCARDZ_PORT', 5000))
+    port = int(os.environ.get('PORT', 5000))
     app.debug = True
-    # app.run(host='0.0.0.0',
-    #         port=port,
-    #         ssl_context=('config/dev-vcardz.crt', 
-    #                      'config/dev-vcardz.key')
-    app.run(ssl_context=('config/dev-vcardz.crt', 
+    app.run(host='0.0.0.0',
+            port=port,
+            ssl_context=('config/dev-vcardz.crt', 
                          'config/dev-vcardz.key'))
 
