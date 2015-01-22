@@ -1,8 +1,10 @@
+import os
+
 from pymongo import MongoClient
 
 class DbMongo:
     def save_oauth(self, id, token):
-        client = MongoClient('localhost', 27017)
+        client = MongoClient(os.environ.get('MONGOLAB_URI'))
         client.vcardz.customers.save({'_id': id,
                                       'token': token})
 
