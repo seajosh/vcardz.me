@@ -5,12 +5,14 @@ from pymongo import MongoClient
 class DbMongo:
     def save_oauth(self, id, token):
         client = MongoClient(os.environ.get('MONGOLAB_URI'))
-        client.vcardz.customers.save({'_id': id,
-                                      'token': token})
+        db = client.get_default_database()
+        db.customers.save({'_id': id,
+                           'token': token})
 
     def get_oauth_token(self, id):
         client = MongoClient('localhost', 27017)
-        customer = client.vcardz.customers.find_one({'_id': id})
+        db = client.get_default_database()
+        customer = db.customers.find_one({'_id': id})
         return customer['token']
         
     
