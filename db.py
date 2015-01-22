@@ -10,7 +10,7 @@ class DbMongo:
                            'token': token})
 
     def get_oauth_token(self, id):
-        client = MongoClient('localhost', 27017)
+        client = MongoClient(os.environ.get('MONGOLAB_URI'))
         db = client.get_default_database()
         customer = db.customers.find_one({'_id': id})
         return customer['token']
